@@ -1,14 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 
-const Card = styled.div `
-background:#FEF1C5;
-border: 2px solid #DCDCDC;
-width:30%;
-margin: 30px;
-border-radius:10px;
-padding-bottom:1%;
-`
 const Container = styled.div `
 display:flex;
 justify-content:center;
@@ -35,8 +27,18 @@ const Info =styled.h4 `
  margin: 10px;
 `
 
+
  const StarWarsCard = props => {
    
+const Card = styled.div `
+background:#FEF1C5;
+border: 2px solid ${props.eye_color};
+width:30%;
+margin: 30px;
+border-radius:10px;
+padding-bottom:1%;
+`
+
     return (
        
             <Card key={props.index}>
