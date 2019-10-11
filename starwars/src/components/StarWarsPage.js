@@ -1,6 +1,14 @@
 import React, {useState, useEffect} from "react";
 import axios from "axios";
 import StarWarsCard from "./StarWarsCard"
+import styled from "styled-components";
+
+const Main = styled.div `
+display:flex;
+flex-wrap: wrap;
+justify-content:space-evenly;
+`
+
 
 export default function StarWarsPage() {
 
@@ -21,15 +29,22 @@ useEffect(() => {
 
 return (
     <div>
-    <div>
+    <Main>
       {people.map((data, index )=> {
           return (
-          <StarWarsCard key={index} name={data.name} height={data.height} mass={data.mass} gender={data.gender} birth_year={data.birth_year}
-          hair_color={data.hair_color} skin_color={data.skin_color} eye_color={data.eye_color}/>
-  
+          <StarWarsCard 
+          key={index} 
+          name={data.name} 
+          height={data.height} 
+          mass={data.mass} 
+          gender={data.gender} 
+          birth_year={data.birth_year}
+          hair_color={data.hair_color} 
+          skin_color={data.skin_color} 
+          eye_color={data.eye_color}/>
            ) }
       )}
-    </div>
+    </Main>
   </div>
 );
 }
