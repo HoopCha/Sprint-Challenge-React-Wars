@@ -11,6 +11,7 @@ padding-bottom:1%;
 `
 const Container = styled.div `
 display:flex;
+justify-content:center;
 `
 
 const Col1 = styled.div `
